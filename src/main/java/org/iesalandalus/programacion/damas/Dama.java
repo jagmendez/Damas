@@ -46,6 +46,16 @@ public class Dama {
         this.posicion = crearPosicionInicial(Color.BLANCO);
         this.esDamaEspecial = false;
     }
+
+    // Constructor con parámetro de entrada COLOR
+    public Dama(Color color) {
+        if (color == null) {
+            throw new NullPointerException("El color no puede ser nulo.");
+        }
+        this.color = color;
+        this.posicion = creaPosicionInicial(color);
+        this.esDamaEspecial = false;
+    }
 }
 
 

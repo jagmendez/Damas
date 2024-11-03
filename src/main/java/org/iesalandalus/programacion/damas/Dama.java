@@ -153,6 +153,14 @@ public class Dama {
         posicion = new Posicion(nuevaFila, nuevaColumna);
 
     }
+
+    @Override
+    public String toString() {
+        return "Dama{" +
+                "color=" + color +
+                ", posicion=" + posicion +
+                '}';
+    }
 }
 
 

@@ -5,4 +5,6 @@ public enum Direccion {
     SURESTE("Sureste"),
     SUROESTE("Suroeste"),
     NOROESTE("Noroeste");
+
+    private string cadenaAMostrar;
 }

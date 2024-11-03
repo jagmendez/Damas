@@ -60,7 +60,8 @@ public class Dama {
     // Método para crear la posición inicial aleatoria
     private Posicion crearPosicionInicial(Color color) {
         int fila;
-        int columna;
+        int posicionColumna;
+        char columna;
 
         // Asigno un valor de fila dependiendo del color de la dama.
         if(color == Color.BLANCO) {
@@ -72,8 +73,10 @@ public class Dama {
 
 
         do {
-            columna = 1 + (int) (Math.random() * 8); // Obtengo el valor de la columna (1 a 8)
-        } while ((fila + columna) % 2 == 0); // En el tablero, todas las posiciones (fila+columna) que el resto de la división sea 0, son casillas de color negro.
+            posicionColumna = 1 + (int) (Math.random() * 8); // Obtengo el valor de la columna (1 a 8)
+        } while ((fila + posicionColumna) % 2 == 0); // En el tablero, todas las posiciones (fila+columna) que el resto de la división sea 0, son casillas de color negro.
+
+            columna = (char) ('a' + posicionColumna);
 
         return new Posicion(fila, columna);
     }

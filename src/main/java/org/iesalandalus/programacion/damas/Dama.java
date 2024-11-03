@@ -39,6 +39,13 @@ public class Dama {
         }
         this.esDamaEspecial = esDamaEspecial;
     }
+
+    // Constructor por defecto
+    public Dama() {
+        this.color = Color.BLANCO;
+        this.posicion = crearPosicionInicial(Color.BLANCO);
+        this.esDamaEspecial = false;
+    }
 }
 
 

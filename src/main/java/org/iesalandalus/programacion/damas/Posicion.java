@@ -1,5 +1,7 @@
 package org.iesalandalus.programacion.damas;
 
+import java.util.Objects;
+
 public class Posicion {
     private int fila;
     private char columna;
@@ -47,5 +49,22 @@ public class Posicion {
         }
         this.fila=coordenadas.fila;
         this.columna=coordenadas.columna;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Posicion coordenadas = (Posicion) o;
+        return fila == coordenadas.fila && columna == coordenadas.columna;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(fila, columna);
     }
 }

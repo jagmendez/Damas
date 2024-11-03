@@ -40,4 +40,12 @@ public class Posicion {
         setFila(fila);
         setColumna(columna);
     }
+
+    public Posicion(Posicion coordenadas) {
+        if (coordenadas == null) {
+            throw new IllegalArgumentException("La posición no puede ser nula.");
+        }
+        this.fila=coordenadas.fila;
+        this.columna=coordenadas.columna;
+    }
 }

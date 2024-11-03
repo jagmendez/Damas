@@ -33,7 +33,7 @@ public class Dama {
     }
 
     public void setEsDamaEspecial(boolean esDamaEspecial) { //Setter
-        if (esDamaEspecial<>true || esDamaEspecial<>false)
+        if (esDamaEspecial!=true || esDamaEspecial!=false)
         {
             throw new IllegalArgumentException("El valor no es correcto. Debe ser Verdadero o Falso.");
         }
@@ -53,8 +53,29 @@ public class Dama {
             throw new NullPointerException("El color no puede ser nulo.");
         }
         this.color = color;
-        this.posicion = creaPosicionInicial(color);
+        this.posicion = crearPosicionInicial(color);
         this.esDamaEspecial = false;
+    }
+
+    // Método para crear la posición inicial aleatoria
+    private Posicion crearPosicionInicial(Color color) {
+        int fila;
+        int columna;
+
+        // Asigno un valor de fila dependiendo del color de la dama.
+        if(color == Color.BLANCO) {
+            fila = 1 + (int) (Math.random() * 3); // Con (int) quito decimales al resultado de Math.random (valor entre 0 y 1)
+        }
+        else {
+            fila = 6 + (int) (Math.random() * 3);
+        }
+
+
+        do {
+            columna = 1 + (int) (Math.random() * 8); // Obtengo el valor de la columna (1 a 8)
+        } while ((fila + columna) % 2 == 0); // En el tablero, todas las posiciones (fila+columna) que el resto de la división sea 0, son casillas de color negro.
+
+        return new Posicion(fila, columna);
     }
 }
 

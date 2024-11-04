@@ -43,7 +43,14 @@ public class Consola {
         return color;
     }
 
-
+    //Método para mostrar el Menú direcciones
+    public static void mostrarMenuDirecciones() {
+        System.out.println("Elige la dirección deseada en la que se moverá la dama: ");
+        System.out.println("1. Noreste");
+        System.out.println("2. Sureste");
+        System.out.println("3. Suroeste");
+        System.out.println("4. Noroeste");
+    }
 
 
 }

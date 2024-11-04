@@ -65,5 +65,23 @@ public class Consola {
         return direccion;
     }
 
+    //Método para indicar cuantos pasos se mueve la Dama.
+    public static int elegirPasos() {
+        int pasos;
+
+        // Comprobamos que el valor introducido es válido
+        do {
+            System.out.println("Introduce el número de casillas a mover (mayor o igual que 1): ");
+            pasos = Entrada.entero();
+        }while (pasos < 1);
+
+        return pasos;
+    }
+
+    //Método para mostrar mensaje de despedida.
+    public static void despedirse() {
+        System.out.println("Gracias por jugar a las Damas. ¡Vuelve pronto!");
+    }
+
 
 }

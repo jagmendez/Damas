@@ -6,15 +6,15 @@ public enum Direccion {
     SUROESTE("Suroeste"),
     NOROESTE("Noroeste");
 
-    private String mensajeAMostrar;
+    private String cadenaAMostrar;
 
-    private Direccion(String mensajeAMostrar)
+    Direccion(String cadenaAMostrar)
     {
-        this.mensajeAMostrar=mensajeAMostrar;
+        this.cadenaAMostrar=cadenaAMostrar;
     }
 
     @Override
     public String toString() {
-        return mensajeAMostrar;
+        return cadenaAMostrar;
     }
 }

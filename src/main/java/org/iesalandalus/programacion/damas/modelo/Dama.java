@@ -1,4 +1,4 @@
-package org.iesalandalus.programacion.damas;
+package org.iesalandalus.programacion.damas.modelo;
 
 import javax.naming.OperationNotSupportedException;
 

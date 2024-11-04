@@ -53,7 +53,7 @@ public class Consola {
     }
 
     //Método para eligir la dirección
-    public static void elegirDireccion() {
+    public static int elegirDireccion() {
         int direccion;
 
         // Comprobamos que la opción elegida es válida

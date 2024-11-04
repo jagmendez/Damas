@@ -52,5 +52,18 @@ public class Consola {
         System.out.println("4. Noroeste");
     }
 
+    //Método para eligir la dirección
+    public static void elegirDireccion() {
+        int direccion;
+
+        // Comprobamos que la opción elegida es válida
+        do {
+            System.out.println("Elige una opción del menú (1-4): ");
+            direccion = Entrada.entero();
+        }while(direccion < 1 || direccion > 4);
+
+        return direccion;
+    }
+
 
 }

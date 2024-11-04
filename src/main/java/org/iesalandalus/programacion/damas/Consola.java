@@ -32,14 +32,18 @@ public class Consola {
 
     // Método para elegir el color de la dama
     public static int elegirOpcion() {
-        int Color;
+       int color;
 
         // Comprobamos que la opción elegida es válida
         do {
-            System.out.println("Elige un color (0.Blanco, 1.Negro): ");
-            Color = Entrada.entero();
-        }while(Color != 0 && Color != 1);
+            System.out.println("Elige un color (1.Blanco, 2.Negro): ");
+            color = Entrada.entero();
+        }while(color != 1 || color != 2);
 
-        return Color;
+        return color;
     }
+
+
+
+
 }

@@ -9,14 +9,15 @@ public class Consola {
 
     }
 
-    //
+    // Método para mostrar el Menú
     public static void mostrarMenu() {
         System.out.println("1. Crear dama por defecto");
-        System.out.println("1. Crear dama eligiendo su color");
+        System.out.println("2. Crear dama eligiendo su color");
         System.out.println("3. Mover");
         System.out.println("4. Salir");
     }
 
+    // Método para comprobar la opción elegida del menú
     public static int elegirOpcionMenu() {
         int opcionMenu;
 
@@ -27,5 +28,18 @@ public class Consola {
         }while(opcionMenu < 1 || opcionMenu > 4);
 
         return opcionMenu;
+    }
+
+    // Método para elegir el color de la dama
+    public static int elegirOpcion() {
+        int Color;
+
+        // Comprobamos que la opción elegida es válida
+        do {
+            System.out.println("Elige un color (0.Blanco, 1.Negro): ");
+            Color = Entrada.entero();
+        }while(Color != 0 && Color != 1);
+
+        return Color;
     }
 }

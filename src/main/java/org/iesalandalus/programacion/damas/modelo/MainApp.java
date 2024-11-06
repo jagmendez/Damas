@@ -113,6 +113,24 @@ public class MainApp {
             System.out.println(dama);
         }
     }
+
+    // Crado Método principal main
+    public static void main(String[] args) {
+        int opcion;
+
+        do {
+            System.out.println("Menú principal:");
+            System.out.println("1. Crear dama por defecto");
+            System.out.println("2. Crear dama con color");
+            System.out.println("3. Mover dama");
+            System.out.println("4. Mostrar dama");
+            System.out.println("5. Salir");
+            System.out.print("Elige una opción: ");
+            opcion = Entrada.entero();
+            ejecutarOpcion(opcion);
+        } while (opcion < 0 || opcion > 5);
+
+    }
 	
 	
 }

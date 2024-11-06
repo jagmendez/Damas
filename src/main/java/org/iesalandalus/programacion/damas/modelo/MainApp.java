@@ -104,6 +104,15 @@ public class MainApp {
             System.out.println("Error: " + e.getMessage());
         }
     }
+
+    // Creado Método mostrarDama
+    public static void mostrarDama() {
+        if (dama == null) {
+            System.out.println("No hay ninguna dama creada.");
+        } else {
+            System.out.println(dama);
+        }
+    }
 	
 	
 }

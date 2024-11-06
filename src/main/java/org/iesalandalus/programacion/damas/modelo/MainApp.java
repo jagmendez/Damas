@@ -26,6 +26,12 @@ public class MainApp {
                 System.out.println("Opción no válida.");
         }
     }
+
+    //Creado método crearDamaDefecto
+    public static void crearDamaDefecto() {
+        dama = new Dama();
+        System.out.println("Creada Dama por defecto.");
+    }
 	
 	
 }

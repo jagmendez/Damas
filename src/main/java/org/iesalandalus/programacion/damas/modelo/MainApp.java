@@ -117,6 +117,7 @@ public class MainApp {
     // Crado Método principal main
     public static void main(String[] args) {
         int opcion;
+        int opcionJuego;
 
         do {
             System.out.println("Menú principal:");
@@ -129,6 +130,20 @@ public class MainApp {
             opcion = Entrada.entero();
             ejecutarOpcion(opcion);
         } while (opcion < 0 || opcion > 5);
+
+        do {
+            try {
+                System.out.println("==================================");
+                System.out.println("Sigue jugando");
+                System.out.println("3. Mover dama");
+                System.out.println("4. Mostrar dama");
+                System.out.println("5. Salir");
+                opcionJuego = Entrada.entero();
+                ejecutarOpcion(opcionJuego);
+            } catch (Exception e) {
+                System.out.println("Error: " + e.getMessage());
+            }
+        }while (opcion == 1  || opcion == 2);
 
     }
 	

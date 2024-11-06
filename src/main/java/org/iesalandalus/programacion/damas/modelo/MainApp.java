@@ -58,7 +58,52 @@ public class MainApp {
 
     }
 
+    //Creado método mover
+    public static void mover() {
+        if (dama == null) {
+            System.out.println("Debe crear una dama antes de moverla.");
+            return;
+        }
 
+        System.out.println("Elige la dirección deseada en la que se moverá la dama: ");
+        System.out.println("1. Noreste");
+        System.out.println("2. Sureste");
+        System.out.println("3. Suroeste");
+        System.out.println("4. Noroeste");
+        int direccionEntrada = Entrada.entero();
+
+        try {
+
+            int pasos = 1;
+            if (dama.getEsDamaEspecial()) {
+                System.out.println("Indica el número de pasos:");
+                pasos = Entrada.entero();
+                if (pasos < 1) {
+                    throw new IllegalArgumentException("El número de pasos debe ser mayor o igual a 1.");
+                }
+            }
+
+            switch (direccionEntrada) {
+                case 1:
+                    dama.mover(Direccion.NORESTE, pasos);
+                    break;
+                case 2:
+                    dama.mover(Direccion.SURESTE, pasos);
+                    break;
+                case 3:
+                    dama.mover(Direccion.SUROESTE, pasos);
+                    break;
+                case 4:
+                    dama.mover(Direccion.NOROESTE, pasos);
+                    break;
+            }
+
+            System.out.println("La dama se ha movido correctamente.");
+
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
 	
 	
 }

@@ -30,7 +30,7 @@ public class Dama {
         this.posicion = posicion;
     }
 
-    public boolean isEsDamaEspecial() { //Getter
+    public boolean getEsDamaEspecial() { //Getter
         return esDamaEspecial;
     }
 

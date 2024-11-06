@@ -1,5 +1,7 @@
 package org.iesalandalus.programacion.damas.modelo;
 
+import org.iesalandalus.programacion.utilidades.Entrada;
+
 public class MainApp {
 
     //Creado atributo de clase Dama
@@ -32,6 +34,31 @@ public class MainApp {
         dama = new Dama();
         System.out.println("Creada Dama por defecto.");
     }
+
+    //Creado método crearDamaColor
+    public static void crearDamaColor() {
+        System.out.println("Elige el color de la dama (1.Blanco, 2.Negro): ");
+        int colorEntrada = Entrada.entero();
+
+        try {
+            switch (colorEntrada) {
+                case 1:
+                    dama = new Dama(Color.BLANCO);
+                    break;
+                case 2:
+                    dama = new Dama(Color.NEGRO);
+                    break;
+            }
+
+            System.out.println("Dama de color " + dama.getColor() + " creada.");
+        } catch (IllegalArgumentException e) {
+            System.out.println("Color no válido.");
+        }
+
+
+    }
+
+
 	
 	
 }
